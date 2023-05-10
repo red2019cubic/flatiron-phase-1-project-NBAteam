@@ -11,10 +11,16 @@
   <body
     background="//wsl.localhost/Ubuntu/home/red/Development/code/project1/images/NBAbackground2.jpg"
   >
-    <header></header>
+    <header id="headerBackground">
+     
+      
+    </header>
     <main>
-      <div id="nav-wrapper">
-        <nav>
+      
+        
+            <center><h2>Select your Devision</h2></center>
+            <div id="nav-bar">
+            <nav>
           <ul id="nav-links">
             <li class="nav-link" for="atlantic">Atlantic</li>
             <li class="nav-link" for="southeast">Southeast</li>
@@ -25,30 +31,75 @@
         </nav>
       </div>
 
-      <div id="card-wrapper"></div>
     </main>
     <footer>
-      <div id="search-bar-wrapper">
-        <form id="search-bar-form">
-          <label for="abbreviation">Abbreviation :</label>
-          <input type="text" placeholder="Team Abbreviation" />
-
-          <label for="city">City :</label><br />
-          <input type="text" placeholder="City" /><br />
-
-          <label for="conference">Conference :</label><br />
-          <input type="text" placeholder="Conference" /><br />
-
-          <label for="division">Division</label><br />
-          <input type="text" placeholder="Division" /><br />
-
-          <label for="full_name">Full Name :</label><br />
-          <input type="text" placeholder="Enter Team Full Name" /><br />
-
-          <label for="name">Name :</label><br />
-          <input type="text" placeholder="name" /><br />
-        </form>
-      </div>
+        <div>
+            <center><form>
+                <div class="banner">
+                  <h1>Add Your Favorite NBA Team</h1>
+                </div>
+        
+                <div class="item">
+                  <input
+                    id="name"
+                    type="text"
+                    name="name"
+                    placeholder="name"
+                    required
+                  />
+        
+                  <input
+                    id="tname"
+                    type="text"
+                    name="Team Full Name"
+                    placeholder="Full Name"
+                    required
+                  />
+        
+                  <input
+                    id="abbr"
+                    type="text"
+                    name="Abbreviation"
+                    placeholder="Abbreviation"
+                    required
+                  />
+        
+                  <input
+                    id="city"
+                    type="text"
+                    name="city"
+                    placeholder="City"
+                    required
+                  />
+        
+                  <input
+                    id="state"
+                    type="text"
+                    name="state"
+                    placeholder="State"
+                    required
+                  />
+        
+                  <input
+                    id="dev"
+                    type="text"
+                    name="division"
+                    placeholder="Division"
+                    required
+                  />
+        
+                  <input
+                    id="image"
+                    type="text"
+                    name="image"
+                    placeholder="image"
+                    required
+                  />
+                  <button type="submit" href="/">SUBMIT</button>
+                </div>
+              </form>
+              </center>
+          </div>
     </footer>
   </body>
 </html>
