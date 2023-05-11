@@ -1,133 +1,149 @@
+document.addEventListener("DOMContentLoaded", () => {
+  pacificDivisionTeams();
+  centralDivisionTeams();
+  southwestDivisionTeams();
 
+  southeastDivisionTeams();
+  atlanticDivisionTeams();
+});
 
-
-
-
-
-function createCard(data) {
+function createTeamImage(team) {
+  console.log(team);
   const div = document.querySelector(".card");
+
   const img = document.createElement("img");
-  img.src = data.img;
+
+  img.src = team.img;
 
   div.append(img);
-  const imgList = document.querySelectorAll("img");
 
   let html = "";
-  for (let i = 0; i < imgList.length; i++) {
- 
-    imgList[i].addEventListener("click", () => {
-      fetch("http://localhost:3000/data")
-        .then((response) => response.json())
-        .then((data) =>
-          data.forEach((logo) => {
-            html = `<div class="team">
+
+  img.addEventListener("click", () => {
+    html = `<div class="team">
                       <h1><b>Team Details</b></h2>
                       <br>
                       <br>
-                      <h2>Name: ${logo.name}</h2>
-                      <h2>Full Name: ${logo.full_name}</h2>
-                      <h2>Abbreviation: ${logo.abbreviation}</h2>
-                      <h2>City: ${logo.city}</h2>
-                      <h2>Conference: ${logo.conference}</h2>
-                      <h2>Division: ${logo.division}</h2>
+                      
+                      <h2>Name: ${team.name}</h2>
+                      <h2>Full Name: ${team.full_name}</h2>
+                      <h2>Abbreviation: ${team.abbreviation}</h2>
+                      <h2>City: ${team.city}</h2>
+                      <h2>Conference: ${team.conference}</h2>
+                      <h2>Division: ${team.division}</h2>
                       </div>`;
-            //let card = document.querySelector(".team")
-            div.innerHTML = html;
-          })
-        );
-    });
-  }
+   
+      div.innerHTML = html;
+    
+  });
 }
 
-function atlanticDivisionTeams(){
+function atlanticDivisionTeams() {
   const atlanticDiv = document.querySelector("#atlantic");
-  console.log(atlanticDiv)
+
   atlanticDiv.addEventListener("click", () => {
     fetch("http://localhost:3000/data")
       .then((response) => response.json())
-      .then((data) => data.filter((team) => {
-        if(team.division === "Atlantic"){
-        console.log(team)
-         createCard(team);
-        }
-      }))
+      .then((data) => {
+        const div = document.querySelector(".card");
+        div.replaceChildren();
+        data.filter((team) => {
+          if (team.division === "Atlantic") {
+            createTeamImage(team);
+          }
+        });
+      });
   });
 }
-function pacificDivisionTeams(){
+function pacificDivisionTeams() {
   const pacificDiv = document.querySelector("#pacific");
-  console.log(atlanticDiv)
+
   pacificDiv.addEventListener("click", () => {
     fetch("http://localhost:3000/data")
       .then((response) => response.json())
-      .then((data) => data.filter((team) => {
-        if(team.division === "Pacific"){
-        console.log(team)
-         createCard(team);
-
-        }
-      }))
+      .then((data) => {
+        const div = document.querySelector(".card");
+        div.replaceChildren();
+      
+        data.filter((team) => {
+          if (team.division === "Pacific") {
+            createTeamImage(team);
+          }
+        })
+  });
   });
 }
- function southeastDivisionTeams(){
+function southeastDivisionTeams() {
   const southeastDiv = document.querySelector("#southeast");
-  console.log(atlanticDiv)
+
   southeastDiv.addEventListener("click", () => {
     fetch("http://localhost:3000/data")
       .then((response) => response.json())
-      .then((data) => data.filter((team) => {
-        if(team.division === "Southeast"){
-        console.log(team)
-         createCard(team);
-         
-        }
-      }))
+      .then((data) =>  {
+        const div = document.querySelector(".card");
+      div.replaceChildren();
+        data.filter((team) => {
+          if (team.division === "Southeast") {
+            createTeamImage(team);
+          }
+        })
+       } );
   });
 }
 
-function eastDivisionTeams(){
-  const eastDiv = document.querySelector("#east");
-  
-  eastDiv.addEventListener("click", () => {
-    fetch("http://localhost:3000/data")
-      .then((response) => response.json())
-      .then((data) => data.filter((team) => {
-        if(team.division === "Southeast"){
-        console.log(team)
-         createCard(team);
-        
-        }
-      }))
-  });
-}
+function southwestDivisionTeams() {
+  const westDiv = document.querySelector("#southwest");
 
-  function westDivisionTeams(){
-  const westDiv = document.querySelector("#west");
-  
   westDiv.addEventListener("click", () => {
     fetch("http://localhost:3000/data")
       .then((response) => response.json())
-      .then((data) => data.filter((team) => {
-        if(team.division === "Southwest"){
-        console.log(team)
-         createCard(team);
-         
-        }
-      }))
+      .then((data) =>  {
+        const div = document.querySelector(".card");
+      div.replaceChildren();
+        data.filter((team) => {
+          if (team.division === "Southwest") {
+            createTeamImage(team);
+          }
+        })
+  });
   });
 }
 
-function centralDivision(){
+function centralDivisionTeams() {
   const centralDiv = document.querySelector("#central");
-  
+
   centralDiv.addEventListener("click", () => {
     fetch("http://localhost:3000/data")
       .then((response) => response.json())
-      .then((data) => data.filter((team) => {
-        if(team.division === "Central"){
-        console.log(team)
-         createCard(team);
-         
-        }
-      }))
+      .then((data) => {
+        const div = document.querySelector(".card");
+        div.replaceChildren();
+        data.filter((team) => {
+          if (team.division === "Central") {
+            console.log(team);
+            createTeamImage(team);
+          }
+        })
+       } );
   });
 }
+
+// function addTeam(){
+//   const form = document.querySelector(".form")
+//   form.addEventListener('submit', (e)=>{
+//     e.preventDefault()
+//     fetch("http://localhost:3000/data", {
+//       method:"POST",
+//       header:
+//       {
+//         "Content-Type": "application/json",
+//         Accept:"application/json"
+//       },
+//       body:JSON.stringify({
+//         const formData = Object.fromEntries(new FormData(event.target))
+//       })
+//     })
+//     .then((response) => response.json())
+//     .then((data) =>
+//   })
+// }
