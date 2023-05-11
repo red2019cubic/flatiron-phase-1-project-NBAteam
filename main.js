@@ -53,4 +53,60 @@ function createCard(data) {
       }))
   });
 
+  const pacificDiv = document.querySelector("#pacific");
+  console.log(atlanticDiv)
+  pacificDiv.addEventListener("click", () => {
+    fetch("http://localhost:3000/data")
+      .then((response) => response.json())
+      .then((data) => data.filter((team) => {
+        if(team.division === "Pacific"){
+        console.log(team)
+         createCard(team);
+
+        }
+      }))
+  });
+
+  const southeastDiv = document.querySelector("#southeast");
+  console.log(atlanticDiv)
+  southeastDiv.addEventListener("click", () => {
+    fetch("http://localhost:3000/data")
+      .then((response) => response.json())
+      .then((data) => data.filter((team) => {
+        if(team.division === "Southeast"){
+        console.log(team)
+         createCard(team);
+         
+        }
+      }))
+  });
+
+  const eastDiv = document.querySelector("#east");
+  
+  eastDiv.addEventListener("click", () => {
+    fetch("http://localhost:3000/data")
+      .then((response) => response.json())
+      .then((data) => data.filter((team) => {
+        if(team.division === "Southeast"){
+        console.log(team)
+         createCard(team);
+        
+        }
+      }))
+  });
+
+  
+  const westDiv = document.querySelector("#west");
+  
+  westDiv.addEventListener("click", () => {
+    fetch("http://localhost:3000/data")
+      .then((response) => response.json())
+      .then((data) => data.filter((team) => {
+        if(team.division === "Southwest"){
+        console.log(team)
+         createCard(team);
+         
+        }
+      }))
+  });
 
