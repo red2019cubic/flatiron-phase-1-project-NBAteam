@@ -39,7 +39,7 @@ function createCard(data) {
   }
 }
 
-
+function atlanticDivisionTeams(){
   const atlanticDiv = document.querySelector("#atlantic");
   console.log(atlanticDiv)
   atlanticDiv.addEventListener("click", () => {
@@ -52,7 +52,8 @@ function createCard(data) {
         }
       }))
   });
-
+}
+function pacificDivisionTeams(){
   const pacificDiv = document.querySelector("#pacific");
   console.log(atlanticDiv)
   pacificDiv.addEventListener("click", () => {
@@ -66,7 +67,8 @@ function createCard(data) {
         }
       }))
   });
-
+}
+ function southeastDivisionTeams(){
   const southeastDiv = document.querySelector("#southeast");
   console.log(atlanticDiv)
   southeastDiv.addEventListener("click", () => {
@@ -80,7 +82,9 @@ function createCard(data) {
         }
       }))
   });
+}
 
+function eastDivisionTeams(){
   const eastDiv = document.querySelector("#east");
   
   eastDiv.addEventListener("click", () => {
@@ -94,8 +98,9 @@ function createCard(data) {
         }
       }))
   });
+}
 
-  
+  function westDivisionTeams(){
   const westDiv = document.querySelector("#west");
   
   westDiv.addEventListener("click", () => {
@@ -109,7 +114,9 @@ function createCard(data) {
         }
       }))
   });
+}
 
+function centralDivision(){
   const centralDiv = document.querySelector("#central");
   
   centralDiv.addEventListener("click", () => {
@@ -123,3 +130,4 @@ function createCard(data) {
         }
       }))
   });
+}
