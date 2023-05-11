@@ -28,7 +28,7 @@
   color: hsl(12, 93%, 47%);
 }
 h2 {
-  color: #e75b09;
+  color: #063f5a;
   font-family: "Courier New", Courier, monospace;
   font-size: 20px;
   font-weight: bold;
@@ -168,7 +168,7 @@ button:hover {
   background-color: #808080ad;
 }
 .team.h2 {
-  color: #ff9800;
+  color: hsla(66, 100%, 50%, 0.918);
 }
 
 .card > img {
