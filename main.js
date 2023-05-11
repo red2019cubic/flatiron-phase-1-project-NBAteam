@@ -110,3 +110,16 @@ function createCard(data) {
       }))
   });
 
+  const centralDiv = document.querySelector("#central");
+  
+  centralDiv.addEventListener("click", () => {
+    fetch("http://localhost:3000/data")
+      .then((response) => response.json())
+      .then((data) => data.filter((team) => {
+        if(team.division === "Central"){
+        console.log(team)
+         createCard(team);
+         
+        }
+      }))
+  });
