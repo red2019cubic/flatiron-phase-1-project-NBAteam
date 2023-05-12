@@ -47,13 +47,13 @@ document.addEventListener("DOMContentLoaded", (e) => {
                       <img id="logo" src="${team.img}" width=200px height=200px/>
                       
                   
-                      <p>Name: ${team.name}</p>
-                      <p>Full Name: ${team.fullname}</p>
-                      <p>Abbreviation: ${team.abbreviation}</p>
-                      <p>City: ${team.city}</p>
-                      <p>Conference: ${team.conference}</p>
+                      <p><strong>Name: ${team.name}</strong></p>
+                      <p><strong>Full Name: ${team.fullname}</strong></p>
+                      <p><strong>Abbreviation: ${team.abbreviation}</strong></p>
+                      <p><strong>City: ${team.city}</strong></p>
+                      <p><strong>Conference: ${team.conference}</strong></p>
                   
-                      <p>Division: ${team.division}</p>
+                      <p><strong>Division: ${team.division}</strong></p>
                       <button id="deleteBtn">Delete</button>
                       <p>
                       <span class="fa fa-star "></span>
