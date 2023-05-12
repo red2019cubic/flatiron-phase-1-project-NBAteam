@@ -162,8 +162,8 @@ input:hover::placeholder {
   align-items: center;
   width: 250px;
   height: auto;
-  padding: 90px 80px; 
-  margin-top : 10px;
+  padding: 90px 80px;
+  margin-top: 10px;
   background-color: #808080ad;
 }
 .team.h2 {
@@ -195,7 +195,9 @@ body {
   border-radius: 5px 5px 5px 5px;
   width: 200px;
   height: 200px;
-  margin-top:none;
+  margin-top: none;
+}
 
-  
+.checked {
+  color: orange;
 }

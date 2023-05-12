@@ -4,15 +4,14 @@ document.addEventListener("DOMContentLoaded", (e) => {
     .then((data) => {
       data.forEach((team) => {
         createTeamLogo(team);
-      })
-    })
+      });
+    });
 
   pacificDivisionTeams();
   centralDivisionTeams();
   southwestDivisionTeams();
   southeastDivisionTeams();
   atlanticDivisionTeams();
- 
 
   const form = document.querySelector(".form");
 
@@ -20,36 +19,29 @@ document.addEventListener("DOMContentLoaded", (e) => {
     e.preventDefault();
     const formData = Object.fromEntries(new FormData(e.target));
     addNewTeam(formData);
-  })
+  });
 
   function addNewTeam(newTeam) {
     fetch("http://localhost:3000/data", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Accept": "application/json"
+        Accept: "application/json",
       },
       body: JSON.stringify({
-        ...newTeam
-      })
+        ...newTeam,
+      }),
     })
       .then((res) => res.json())
-      .then((team) => createTeamLogo(team))
+      .then((team) => createTeamLogo(team));
   }
-  
+
   function createTeamLogo(team) {
-    // let html = "";
-    // const div = document.querySelector(".card");
-    //const img = document.createElement("img");
-    // img.src = team.img;
-    // div.append(img);
-    //img.addEventListener("click", () => {
-      console.log(team.img)
-      let card = document.createElement("li")
-      card.className = "card"
+    let card = document.createElement("li");
+    card.className = "card";
     card.innerHTML = `
-    <div class="team">
-    <img src="${team.img}" width=200px height=200px/>
+                      <div class="team">
+                      <img src="${team.img}" width=200px height=200px/>
                       <h1><b>Team Details</b></h2>
                   
                       <p>Name: ${team.name}</p>
@@ -57,21 +49,41 @@ document.addEventListener("DOMContentLoaded", (e) => {
                       <p>Abbreviation: ${team.abbreviation}</p>
                       <p>City: ${team.city}</p>
                       <p>Conference: ${team.conference}</p>
+                  
                       <p>Division: ${team.division}</p>
                       <button id="deleteBtn">Delete</button>
+                      <p>
+                      <span class="fa fa-star "></span>
+                      <span class="fa fa-star "></span>
+                      <span class="fa fa-star "></span>
+                      <span class="fa fa-star"></span>
+                      <span class="fa fa-star"></span>
+                      </p>
                       </div>`;
 
-      //div.innerHTML = html;
+    document.querySelector("#team-log").appendChild(card);
 
-    //})
-    document.querySelector("#team-log").appendChild(card)
-    card.querySelector("#deleteBtn").addEventListener("click", ()=>{
-      card.innerHTML="";
-      
-    })
-  
+    card.querySelector("#deleteBtn").addEventListener("click", () => {
+      card.remove();
+      removeTeamCard(team.id);
+    });
+    function removeTeamCard(id) {
+      fetch(`http://localhost:3000/data/${id}`, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+      });
+    }
+    const rating = document.querySelectorAll("span");
+    console.log(rating);
+    rating.forEach((rating) =>
+      rating.addEventListener("click", () => {
+        rating.className = "fa fa-star checked";
+      })
+    );
   }
-
 
   function atlanticDivisionTeams() {
     const atlanticDiv = document.querySelector("#atlantic");
@@ -161,9 +173,4 @@ document.addEventListener("DOMContentLoaded", (e) => {
         });
     });
   }
-
-function viewAllTeamsLogo(){
-
-}
-  
-})
+});
