@@ -109,6 +109,56 @@
       "fullname": "New York Knicks",
       "name": "Knicks",
       "img": "./images/knicks.jpg"
+    },
+    {
+      "abbreviation": "NYK",
+      "city": "Brooklyn",
+      "conference": "East",
+      "division": "Atlantic",
+      "fullname": "New York Knicks",
+      "name": "Roasted Chicken",
+      "img": "./images/knicks.jpg",
+      "id": 12
+    },
+    {
+      "abbreviation": "NYK",
+      "city": "Brooklyn",
+      "conference": "dcmmdc",
+      "division": "Atlantic",
+      "fullname": "New York Knicks",
+      "name": "Red",
+      "img": "./images/spurs.jpg",
+      "id": 13
+    },
+    {
+      "abbreviation": "BNK",
+      "city": "Brooklyn",
+      "conference": "dsskjds",
+      "division": "Atlantic",
+      "fullname": "Brooklyn",
+      "name": "Meat Lover ",
+      "img": "./images/knicks.jpg",
+      "id": 14
+    },
+    {
+      "abbreviation": "ertre",
+      "city": "New York",
+      "conference": "East",
+      "division": "sadk",
+      "fullname": "Brooklyn",
+      "name": "Roasted Chicken",
+      "img": "./images/knicks.jpg",
+      "id": 15
+    },
+    {
+      "abbreviation": "NYK",
+      "city": "Brooklyn",
+      "conference": "East",
+      "division": "Atlantic",
+      "fullname": "New York Knicks",
+      "name": "Red",
+      "img": "./images/spurs.jpg",
+      "id": 16
     }
   ]
 }

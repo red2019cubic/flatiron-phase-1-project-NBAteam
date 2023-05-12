@@ -17,11 +17,16 @@ document.addEventListener("DOMContentLoaded", (e) => {
   const form = document.querySelector(".form");
 
   //Http post request to create new team logo
-  form.addEventListener("submit", (e) => {
+  form.addEventListener("onsubmit", (e) => {
     e.preventDefault();
     const formData = Object.fromEntries(new FormData(e.target));
     addNewTeam(formData);
+    e.target.reset();
+    
+    
   });
+  document.form.reset();
+  
 
   // this function adds new team logo and add it to the db.json
   function addNewTeam(newTeam) {
