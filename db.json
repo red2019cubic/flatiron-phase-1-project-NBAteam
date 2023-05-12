@@ -1,114 +1,134 @@
 {
   "data": [
     {
+      "id": 1,
       "abbreviation": "BKN",
       "city": "Brooklyn",
       "conference": "East",
       "division": "Atlantic",
-      "full_name": "Brooklyn Nets",
+      "fullname": "Brooklyn Nets",
       "name": "Nets",
       "img": "./images/nets.jpg"
     },
     {
+      "id": 2,
       "abbreviation": "CHA",
       "city": "Charlotte",
       "conference": "East",
       "division": "Southeast",
-      "fullName": "Charlotte Hornets",
+      "fullname": "Charlotte Hornets",
       "name": "Hornets",
       "img": "./images/hornets.jpg"
     },
     {
+      "id": 3,
       "abbreviation": "CHI",
       "city": "Chicago",
       "conference": "East",
       "division": "Central",
-      "full_name": "Chicago Bulls",
+      "fullname": "Chicago Bulls",
       "name": "Bulls",
       "img": "./images/bulls.jpg"
     },
     {
+      "id": 4,
       "abbreviation": "CLE",
       "city": "Cleveland",
       "conference": "East",
       "division": "Central",
-      "full_name": "Cleveland Cavaliers",
+      "fullname": "Cleveland Cavaliers",
       "name": "Cavaliers",
       "img": "./images/cavaliers.jpg"
     },
     {
+      "id": 5,
       "abbreviation": "GSW",
       "city": "Golden State",
       "conference": "West",
       "division": "Pacific",
-      "full_name": "Golden State Warriors",
+      "fullname": "Golden State Warriors",
       "name": "Warriors",
       "img": "./images/warriors.jpg"
     },
     {
+      "id": 6,
       "abbreviation": "LAC",
       "city": "LA",
       "conference": "West",
       "division": "Pacific",
-      "full_name": "LA Clippers",
+      "fullname": "LA Clippers",
       "name": "Clippers",
       "img": "./images/clippers.jpg"
     },
     {
+      "id": 7,
       "abbreviation": "LAL",
       "city": "Los Angeles",
       "conference": "West",
       "division": "Pacific",
-      "full_name": "Los Angeles Lakers",
+      "fullname": "Los Angeles Lakers",
       "name": "Lakers",
       "img": "./images/lakers.jpg"
     },
     {
+      "id": 8,
       "abbreviation": "MIA",
       "city": "Miami",
       "conference": "East",
       "division": "Southeast",
-      "full_name": "Miami Heat",
+      "fullname": "Miami Heat",
       "name": "Heat",
       "img": "./images/heat.jpg"
     },
     {
+      "id": 9,
       "abbreviation": "PHX",
       "city": "Phoenix",
       "conference": "West",
       "division": "Pacific",
-      "full_name": "Phoenix Suns",
+      "fullname": "Phoenix Suns",
       "name": "Suns",
       "img": "./images/suns.jpg"
     },
     {
+      "id": 10,
       "abbreviation": "SAS",
       "city": "San Antonio",
       "conference": "West",
       "division": "Southwest",
-      "full_name": "San Antonio Spurs",
+      "fullname": "San Antonio Spurs",
       "name": "Spurs",
       "img": "./images/spurs.jpg"
     },
     {
-      "id": 20,
+      "id": 11,
       "abbreviation": "NYK",
       "city": "New York",
       "conference": "East",
       "division": "Atlantic",
-      "full_name": "New York Knicks",
+      "fullname": "New York Knicks",
       "name": "Knicks",
-      "img": "./images/knicks.jpg",
-      "likes": null
+      "img": "./images/knicks.jpg"
     },
     {
+      "id": 12,
       "abbreviation": "TOR",
       "city": "Toronto",
       "conference": "East",
       "division": "Atlantic",
-      "full_name": "Toronto Raptors",
+      "fullname": "Toronto Raptors",
       "name": "Raptors",
       "img": "./images/raptors.jpg"
+    },
+    {
+      "abbreviation": "NYK",
+      "city": "Brooklyn",
+      "conference": "East",
+      "division": "Atlantic",
+      "fullname": "New York Knicks",
+      "name": "Knicks",
+      "img": "./images/knicks.jpg",
+      "id": 13
     }
   ]
 }

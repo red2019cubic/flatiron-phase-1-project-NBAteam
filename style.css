@@ -129,7 +129,7 @@ input:hover::placeholder {
   margin-top: 10px;
   text-align: center;
 }
-button {
+#button {
   width: 150px;
   padding: 10px;
   border: none;
@@ -139,7 +139,7 @@ button {
   color: #fff;
   cursor: pointer;
 }
-button:hover {
+#button:hover {
   background: #ff9800;
 }
 
