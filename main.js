@@ -62,23 +62,16 @@ document.addEventListener("DOMContentLoaded", (e) => {
                       </div>`;
 
       //div.innerHTML = html;
-      //document.querySelector("#deleteBtn").addEventListener("click", ()=>{
-        //removeTeam(team);
-        
-      //})
+
     //})
     document.querySelector("#team-log").appendChild(card)
+    card.querySelector("#deleteBtn").addEventListener("click", ()=>{
+      card.innerHTML="";
+      
+    })
   
   }
- function removeTeam(id) {
-  
-  const img = document.querySelector("img");
-  const div = document.querySelector(".card");
-  
-    div.innerHTML="";
-    
-  
-}
+
 
   function atlanticDivisionTeams() {
     const atlanticDiv = document.querySelector("#atlantic");

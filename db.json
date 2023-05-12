@@ -139,16 +139,6 @@
       "fullname": "New York Knicks",
       "name": "Red",
       "img": "./images/knicks.jpg"
-    },
-    {
-      "id": "0",
-      "abbreviation": "BNK",
-      "city": "New York",
-      "conference": "East",
-      "division": "Atlantic",
-      "fullname": "New York Knicks",
-      "name": "Woody",
-      "img": "./images/knicks.jpg"
     }
   ]
 }
