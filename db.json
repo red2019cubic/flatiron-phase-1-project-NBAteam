@@ -1,16 +1,6 @@
 {
   "data": [
     {
-      "id": 1,
-      "abbreviation": "BKN",
-      "city": "Brooklyn",
-      "conference": "East",
-      "division": "Atlantic",
-      "fullname": "Brooklyn Nets",
-      "name": "Nets",
-      "img": "./images/nets.jpg"
-    },
-    {
       "id": 4,
       "abbreviation": "CLE",
       "city": "Cleveland",
@@ -89,6 +79,26 @@
       "name": "Meat Lover ",
       "img": "./images/knicks.jpg",
       "id": 14
+    },
+    {
+      "abbreviation": "BNK",
+      "city": "Brooklyn",
+      "conference": "East",
+      "division": "Atlantic",
+      "fullname": "New York Knicks",
+      "name": "Woody",
+      "img": "./images/knicks.jpg",
+      "id": 15
+    },
+    {
+      "abbreviation": "BNK",
+      "city": "New York",
+      "conference": "East",
+      "division": "Atlantic",
+      "fullname": "New York Knicks",
+      "name": "Roasted Chicken",
+      "img": "./images/knicks.jpg",
+      "id": 16
     }
   ]
 }
