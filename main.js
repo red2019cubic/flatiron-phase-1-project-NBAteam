@@ -42,6 +42,8 @@ document.addEventListener("DOMContentLoaded", (e) => {
     card.innerHTML = `
                       <div class="team">
                       <h1><b>Team Details</b></h2>
+                      <br>
+                      <br>
                       <img id="logo" src="${team.img}" width=200px height=200px/>
                       
                   
