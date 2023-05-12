@@ -39,4 +39,10 @@ Contributors names and contact info:
     Name  : Redouane Sarouf  
     Email : red.sarouf2014@gmail.com
 
+## Credit
+
+
+- images URL: https://wallpaperaccess.com/nba-teams#google_vignette
+- W3school: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_star_rating
+
 
