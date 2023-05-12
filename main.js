@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", (e) => {
+  //display all teams logo
   fetch("http://localhost:3000/data")
     .then((response) => response.json())
     .then((data) => {
@@ -15,12 +16,14 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
   const form = document.querySelector(".form");
 
+  //Http post request to create new team logo
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     const formData = Object.fromEntries(new FormData(e.target));
     addNewTeam(formData);
   });
 
+  // this function adds new team logo and add it to the db.json
   function addNewTeam(newTeam) {
     fetch("http://localhost:3000/data", {
       method: "POST",
@@ -35,7 +38,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
       .then((res) => res.json())
       .then((team) => createTeamLogo(team));
   }
-
+  //this function create card for every team logo and update db.json file
   function createTeamLogo(team) {
     let card = document.createElement("li");
     card.className = "card";
@@ -63,14 +66,15 @@ document.addEventListener("DOMContentLoaded", (e) => {
                       <span class="fa fa-star"></span>
                       </p>
                       </div>`;
-                      
 
     document.querySelector("#team-log").appendChild(card);
 
+    //create a click event listener
     card.querySelector("#deleteBtn").addEventListener("click", () => {
       card.remove();
       removeTeamCard(team.id);
     });
+    //delete record from db.json
     function removeTeamCard(id) {
       fetch(`http://localhost:3000/data/${id}`, {
         method: "DELETE",
@@ -81,14 +85,15 @@ document.addEventListener("DOMContentLoaded", (e) => {
       });
     }
     const rating = document.querySelectorAll("span");
-    
+
+    // display team rating stars
     rating.forEach((rating) =>
       rating.addEventListener("click", () => {
         rating.className = "fa fa-star checked";
       })
     );
   }
-
+  //this function filter team log based on the division value
   function atlanticDivisionTeams() {
     const atlanticDiv = document.querySelector("#atlantic");
 
@@ -106,10 +111,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
         });
     });
   }
-
- 
-
-
+  //this function filter team log based on the division value
   function pacificDivisionTeams() {
     const pacificDiv = document.querySelector("#pacific");
 
@@ -128,6 +130,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
         });
     });
   }
+  //this function filter team log based on the division value
   function southeastDivisionTeams() {
     const southeastDiv = document.querySelector("#southeast");
 
@@ -145,7 +148,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
         });
     });
   }
-
+  //this function filter team log based on the division value
   function southwestDivisionTeams() {
     const westDiv = document.querySelector("#southwest");
 
@@ -163,7 +166,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
         });
     });
   }
-
+  //this function filter team log based on the division value
   function centralDivisionTeams() {
     const centralDiv = document.querySelector("#central");
 
