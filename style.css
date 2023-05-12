@@ -74,7 +74,7 @@ h1 {
 .banner {
   position: relative;
   height: 100px;
-  background-image: "./images/NBAbackground4.jpg";
+  background-image: "./images/NBAbackground2.jpg";
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -166,20 +166,7 @@ input:hover::placeholder {
   margin-top: 10px;
   background-color: #808080ad;
 }
-/* .team.h2 {
-  color: hsla(66, 100%, 50%, 0.918);
-} */
 
-/* .card > img {
-  border-radius: 5px 5px 5px 5px;
-  width: 200px;
-  height: 200px;
-
-  margin-top: 0;
-  line-height: 0;
-
-  padding: none;
-} */
 
 body {
   margin: 0;
@@ -213,4 +200,7 @@ p {
   color: #fff;
   cursor: pointer;
 
+}
+#add-team{
+  background-color: #e75b09;
 }
