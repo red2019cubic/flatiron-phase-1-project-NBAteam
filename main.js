@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
     card.className = "card";
     card.innerHTML = `
                       <div class="team">
-                      <img src="${team.img}" width=200px height=200px/>
+                      <img id="logo" src="${team.img}" width=200px height=200px/>
                       <h1><b>Team Details</b></h2>
                   
                       <p>Name: ${team.name}</p>
@@ -60,6 +60,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
                       <span class="fa fa-star"></span>
                       </p>
                       </div>`;
+                      
 
     document.querySelector("#team-log").appendChild(card);
 

@@ -166,11 +166,11 @@ input:hover::placeholder {
   margin-top: 10px;
   background-color: #808080ad;
 }
-.team.h2 {
+/* .team.h2 {
   color: hsla(66, 100%, 50%, 0.918);
-}
+} */
 
-.card > img {
+/* .card > img {
   border-radius: 5px 5px 5px 5px;
   width: 200px;
   height: 200px;
@@ -179,19 +179,14 @@ input:hover::placeholder {
   line-height: 0;
 
   padding: none;
-}
+} */
 
 body {
   margin: 0;
   padding: 0;
 }
-.cardInfo {
-  width: 200px;
-  height: auto;
-  /* background-color: darkslategray; */
-  color: orangered;
-}
-.img {
+
+#logo {
   border-radius: 5px 5px 5px 5px;
   width: 200px;
   height: 200px;
@@ -200,4 +195,22 @@ body {
 
 .checked {
   color: orange;
+}
+
+p {
+  color:#0e0601;
+  text-align: justify;
+  font-style:bold;
+  
+}
+#deleteBtn{
+  width: calc(50% - 10px);
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #cc7a00;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+
 }
