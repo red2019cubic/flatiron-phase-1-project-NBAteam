@@ -93,9 +93,7 @@ input {
   width: calc(100% - 10px);
   padding: 5px;
 }
-input[type="date"] {
-  padding: 4px 5px;
-}
+
 textarea {
   width: calc(100% - 12px);
   padding: 5px;
@@ -129,8 +127,8 @@ input:hover::placeholder {
   margin-top: 10px;
   text-align: center;
 }
-#button {
-  width: 150px;
+.button {
+  width: calc(100% - 10px);
   padding: 10px;
   border: none;
   border-radius: 5px;
@@ -139,7 +137,7 @@ input:hover::placeholder {
   color: #fff;
   cursor: pointer;
 }
-#button:hover {
+.button:hover {
   background: #ff9800;
 }
 
@@ -192,3 +190,4 @@ body {
   background-color: darkslategray;
   color: orangered;
 }
+

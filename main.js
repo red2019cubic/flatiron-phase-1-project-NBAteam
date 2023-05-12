@@ -1,46 +1,47 @@
 document.addEventListener("DOMContentLoaded", (e) => {
-  pacificDivisionTeams();
+  fetch("http://localhost:3000/data")
+    .then((response) => response.json())
+    .then((data) => {
+      data.forEach((team) => {
+        createTeamImage(team);
+      });
+    });
 
+  pacificDivisionTeams();
   centralDivisionTeams();
   southwestDivisionTeams();
-
   southeastDivisionTeams();
   atlanticDivisionTeams();
 
-  const form = document.querySelector(".form")
-  console.log(form)
-  form.addEventListener("submit", (e)=> {
+  const form = document.querySelector(".form");
+
+  form.addEventListener("submit", (e) => {
     e.preventDefault();
     const formData = Object.fromEntries(new FormData(e.target));
     addNewTeam(formData);
-    
-  })
-  function addNewTeam(newTeam){
+  });
+  function addNewTeam(newTeam) {
     fetch("http://localhost:3000/data", {
-      method:"POST",
-      headers:
-      {
+      method: "POST",
+      headers: {
         "Content-Type": "application/json",
-        "Accept":"application/json"
+        Accept: "application/json",
       },
       body: JSON.stringify({
-        ...newTeam
-      
-      })
-  
-    }).then(res => res.json()).then(team => createTeamImage(team))
-  
-  
+        ...newTeam,
+      }),
+    })
+      .then((res) => res.json())
+      .then((team) => createTeamImage(team));
   }
 
-
   function createTeamImage(team) {
-    console.log(team);
     const div = document.querySelector(".card");
 
     const img = document.createElement("img");
 
     img.src = team.img;
+    img.textContent = "Click here for more Details";
 
     div.append(img);
 
@@ -146,11 +147,23 @@ document.addEventListener("DOMContentLoaded", (e) => {
           div.replaceChildren();
           data.filter((team) => {
             if (team.division === "Central") {
-         
               createTeamImage(team);
             }
           });
         });
+    });
+  }
+
+  function updateTeam(id) {
+    fetch(`http://localhost:3000/data/${id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        likes: newNumberOfLikes,
+      }),
     });
   }
 });
