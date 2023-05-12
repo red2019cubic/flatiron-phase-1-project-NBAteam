@@ -129,6 +129,16 @@
       "name": "Knicks",
       "img": "./images/knicks.jpg",
       "id": 13
+    },
+    {
+      "id": 14,
+      "abbreviation": "BNK",
+      "city": "Brooklyn",
+      "conference": "East",
+      "division": "Atlantic",
+      "fullname": "New York Knicks",
+      "name": "Red",
+      "img": "./images/knicks.jpg"
     }
   ]
 }
