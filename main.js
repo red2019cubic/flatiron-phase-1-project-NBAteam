@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
     .then((response) => response.json())
     .then((data) => {
       data.forEach((team) => {
-        createTeamImage(team);
+        createTeamLogo(team);
       })
     })
 
@@ -34,45 +34,40 @@ document.addEventListener("DOMContentLoaded", (e) => {
       })
     })
       .then((res) => res.json())
-      .then((team) => createTeamImage(team))
+      .then((team) => createTeamLogo(team))
   }
   
-  function createTeamImage(team) {
-    let html = "";
-    const div = document.querySelector(".card");
-    const img = document.createElement("img");
-    
-
-    
-
-    img.src = team.img;
-    
-
-    div.append(img);
-
-    
-
-    img.addEventListener("click", () => {
-      html = `<div class="team">
+  function createTeamLogo(team) {
+    // let html = "";
+    // const div = document.querySelector(".card");
+    //const img = document.createElement("img");
+    // img.src = team.img;
+    // div.append(img);
+    //img.addEventListener("click", () => {
+      console.log(team.img)
+      let card = document.createElement("li")
+      card.className = "card"
+    card.innerHTML = `
+    <div class="team">
+    <img src="${team.img}" width=200px height=200px/>
                       <h1><b>Team Details</b></h2>
-                      <br>
-                      <br>
-                      
-                      <h2>Name: ${team.name}</h2>
-                      <h2>Full Name: ${team.fullname}</h2>
-                      <h2>Abbreviation: ${team.abbreviation}</h2>
-                      <h2>City: ${team.city}</h2>
-                      <h2>Conference: ${team.conference}</h2>
-                      <h2>Division: ${team.division}</h2>
+                  
+                      <p>Name: ${team.name}</p>
+                      <p>Full Name: ${team.fullname}</p>
+                      <p>Abbreviation: ${team.abbreviation}</p>
+                      <p>City: ${team.city}</p>
+                      <p>Conference: ${team.conference}</p>
+                      <p>Division: ${team.division}</p>
                       <button id="deleteBtn">Delete</button>
                       </div>`;
 
-      div.innerHTML = html;
-      document.querySelector("#deleteBtn").addEventListener("click", ()=>{
-        removeTeam(team.id);
+      //div.innerHTML = html;
+      //document.querySelector("#deleteBtn").addEventListener("click", ()=>{
+        //removeTeam(team);
         
-       })
-    })
+      //})
+    //})
+    document.querySelector("#team-log").appendChild(card)
   
   }
  function removeTeam(id) {
@@ -81,7 +76,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
   const div = document.querySelector(".card");
   
     div.innerHTML="";
-    img.innerHTML=""
+    
   
 }
 
@@ -96,7 +91,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
           div.replaceChildren();
           data.filter((team) => {
             if (team.division === "Atlantic") {
-              createTeamImage(team);
+              createTeamLogo(team);
             }
           });
         });
@@ -114,7 +109,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
           data.filter((team) => {
             if (team.division === "Pacific") {
-              createTeamImage(team);
+              createTeamLogo(team);
             }
           });
         });
@@ -131,7 +126,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
           div.replaceChildren();
           data.filter((team) => {
             if (team.division === "Southeast") {
-              createTeamImage(team);
+              createTeamLogo(team);
             }
           });
         });
@@ -149,7 +144,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
           div.replaceChildren();
           data.filter((team) => {
             if (team.division === "Southwest") {
-              createTeamImage(team);
+              createTeamLogo(team);
             }
           });
         });
@@ -167,22 +162,15 @@ document.addEventListener("DOMContentLoaded", (e) => {
           div.replaceChildren();
           data.filter((team) => {
             if (team.division === "Central") {
-              createTeamImage(team);
+              createTeamLogo(team);
             }
           });
         });
     });
   }
 
-  // function removeTeam(id) {
-  
-  // document.querySelector("#deleteBtn").addEventListener("click", ()=>{
-  //   html.innerHTML="";
-  // })
-  
- 
- 
-  //   console.log("clicked")
-    //}
+function viewAllTeamsLogo(){
+
+}
   
 })
