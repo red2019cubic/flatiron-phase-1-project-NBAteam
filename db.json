@@ -109,16 +109,6 @@
       "fullname": "New York Knicks",
       "name": "Knicks",
       "img": "./images/knicks.jpg"
-    },
-    {
-      "id": 12,
-      "abbreviation": "TOR",
-      "city": "Toronto",
-      "conference": "East",
-      "division": "Atlantic",
-      "fullname": "Toronto Raptors",
-      "name": "Raptors",
-      "img": "./images/raptors.jpg"
     }
   ]
 }

@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
       });
     }
     const rating = document.querySelectorAll("span");
-    console.log(rating);
+    
     rating.forEach((rating) =>
       rating.addEventListener("click", () => {
         rating.className = "fa fa-star checked";
@@ -103,6 +103,10 @@ document.addEventListener("DOMContentLoaded", (e) => {
         });
     });
   }
+
+ 
+
+
   function pacificDivisionTeams() {
     const pacificDiv = document.querySelector("#pacific");
 
